@@ -1,0 +1,16 @@
+{% extends 'listings/base.html' %}
+
+{% block content %}
+    <h1>Listings</h1>
+    <a href="{% url 'listing-create' %}">Create New Listing</a>
+
+    <ul>
+        {% for listing in listings %}
+            <li>
+                <a href="{% url 'listing-detail' listing.id %}">{{ listing.title }}</a> 
+                - <a href="{% url 'listing-update' listing.id %}">[Edit]</a>
+                - <a href="{% url 'listing-update' listing.id %}">[Delete]</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
