@@ -21,9 +21,9 @@ class Band(models.Model):
     
 class Listing(models.Model):
     title = models.CharField(max_length=100)
-    description = models.CharField(max_length=1000, blank=True, default='')  # Default to empty string
-    sold = models.BooleanField(default=False)  # Default to False
-    year = models.IntegerField(null=True, blank=True)  # Allow null and blank
+    description = models.CharField(max_length=1000, blank=True, default='')
+    sold = models.BooleanField(default=False)
+    year = models.IntegerField(null=True, blank=True)
     TYPE_CHOICES = [
         ('RE', 'Records'),
         ('CL', 'Clothing'),
